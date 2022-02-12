@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    background-image: url('./images/bg-intro-mobile.png');
+    background-color: hsl(0, 100%, 74%);
+    height: 100%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    z-index: 200;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.overlay  {
+    background: hsl(0, 100%, 74%) ;
+    position: fixed;
+    top: 0;
+    z-index: -111;
+    min-height: 100vh;
+    width: 100vw;
+    opacity: 0.3;
+}
+
+.heading,
+.page-content {
+    padding: 0 1.5rem;
+}
+
+.heading {
+    margin: 8rem 0 2rem;  
+}
+
+h1,
+.heading p,
+.blue p,
+.terms {
+    text-align: center;
+}
+
+h1 {
+    line-height: 1.3;
+    font-size: 2rem;
+}
+
+.heading p {
+    font-size: 14px;
+    margin: 1rem 0 3rem;
+    line-height: 1.8;
+}
+
+.blue {
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 7px;
+    height: 4.5rem;
+    font-size: 14px;
+    justify-content: center;
+    box-shadow: 0 7px 0 0 rgb(0 0 0 / 20%);
+}
+
+form {
+    background-color: #fff;
+    margin: 1.5rem 0 4rem;
+    padding: 1.5rem;
+    border-radius: 7px;
+}
+
+.input-wrap{
+    display: flex;
+    width: 100%;
+    border: 2px solid #e5e5e5;
+    height: 3rem;
+    font-weight: 600;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+input {
+    width: 100%;
+    height: 2.8rem;
+    padding-left: 1rem;
+}
+
+.input-wrap:focus-within {
+    border: 2px solid hsl(246, 25%, 77%);
+}
+
+.error-icon {
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+form >div {
+    padding-bottom: 1.5rem;
+}
+
+.error-icon,
+.error-msg {
+    display: none;
+}
+
+.error ::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: hsl(0, 100%, 74%);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.error-msg {
+    color: hsl(0, 100%, 74%);
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;
+    padding-top: 5px;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+
+.error {
+    border: 2px solid hsl(0, 100%, 74%);
+}
+
+::-webkit-input-placeholder,    /* Edge */
+:-ms-input-placeholder,         /* Internet Explorer 10-11 */
+::placeholder { 
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    background-color:hsl(154, 59%, 51%);
+    width: 100%;
+    height: 3rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 0 0 rgb(43 166 113 / 80%);
+}
+
+.terms {
+    color: #adb5bd;
+    font-size: 13px;  
+    margin-top: 1rem; 
+}
+
+#red {
+    color: hsl(0, 100%, 74%);
+    font-weight: 600; 
+}
+
+@media screen and (min-width: 520px) {
+    .heading,
+    .page-content    {
+        padding: 0 1.5rem;
+        width: 80%;
+        margin: auto;
+    }
+
+    .heading {
+        margin: 8rem auto 2rem;
+    }
+
+    .heading p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .flex-tab {
+        display: flex;
+        align-items: center;
+        margin-top: 6rem;
+    }
+
+    h1,
+    .heading p {
+        text-align: unset;
+    }
+    
+    .heading {
+        margin: unset;
+    }
+}
+  
+@media screen and (min-width: 1000px) {
+    body {
+        background-image: url('./images/bg-intro-desktop.png');
+    }
+
+    .heading,
+    .page-content    {
+        padding: unset;
+        margin: unset;
+    }
+
+    .heading {
+        width: 40%;
+    }
+
+    .page-content {
+        width: 35%;
+    }
+     
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    .flex-tab {
+       justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .flex-tab {
+        justify-content: center;
+    }
+
+    .heading {
+        margin-right: 3rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .heading,
+    .page-content    {
+       max-width: 1320px;
+       width: 30%;
+    }
+}
